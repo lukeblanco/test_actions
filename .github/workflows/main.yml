@@ -5,7 +5,7 @@ permissions:
       id-token: write
       contents: read
 env:
-  branch: ${{ github.ref }}
+  branch: main
   
 jobs: 
   build:
