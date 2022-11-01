@@ -15,7 +15,7 @@ jobs:
      run: mkdir lalala
      
   deploy_prod:
-    if: ${{ env.branch  == 'main' }}
+    if: ${{ env.BRANCH  == 'main' }}
     runs-on: ubuntu-latest
     needs: build
     steps:
