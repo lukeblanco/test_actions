@@ -15,7 +15,7 @@ jobs:
      run: mkdir lalala
      
   deploy_prod:
-    if: ${{ ${{ github.ref }} == 'main' }}
+    if: ${{ github.ref  == 'main' }}
     runs-on: ubuntu-latest
     needs: build
     steps:
