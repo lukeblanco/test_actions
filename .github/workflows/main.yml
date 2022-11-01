@@ -36,7 +36,7 @@ jobs:
 
 
   deploy_staging:
-    #if: ${{ env.GITHUB_REF == 'staging' }}
+    if: ${{ github.ref == 'staging' }}
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -53,4 +53,4 @@ jobs:
           az group list
           pwd
           ls -l
-          echo staging
+          echo $env.branch
