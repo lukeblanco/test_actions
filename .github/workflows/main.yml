@@ -6,7 +6,13 @@ permissions:
       contents: read
       
 jobs: 
-  build-and-deploy:
+  build:
+   runs-on: ubuntu-latest
+   steps:
+   - name: 'build'
+     run: pwd
+     
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - name: 'Az CLI login'
@@ -20,4 +26,4 @@ jobs:
       run: |
           az account show
           az group list
-          pwd 
+          pwd
