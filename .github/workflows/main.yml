@@ -12,8 +12,9 @@ jobs:
    runs-on: ubuntu-latest
    steps:
    - name: 'build'
-     run: mkdir lalala
-     
+     run: |
+       mkdir lalala
+       echo $github.ref
   deploy_prod:
     if: ${{ github.ref  == 'main' }}
     runs-on: ubuntu-latest
