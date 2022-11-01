@@ -13,7 +13,7 @@ jobs:
      run: mkdir lalala
      
   deploy:
-    if: $env.GITHUB_REF == main
+    if: ${{ env.GITHUB_REF == 'main' }}
     runs-on: ubuntu-latest
     needs: build
     steps:
