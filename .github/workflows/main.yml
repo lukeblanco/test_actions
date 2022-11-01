@@ -32,7 +32,12 @@ jobs:
           az group list
           pwd
           ls -l
-          echo $env.branch
+          echo 'con env'
+          echo $env.BRANCH
+          echo '$VARIABLE'
+          echo $BRANCH
+          echo 'github ref'
+          echo ${{ github.ref }} 
 
 
   deploy_staging:
